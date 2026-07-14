@@ -15,6 +15,7 @@ provider "aws" {
 resource "aws_security_group" "web_sg" {
   name        = "${var.project_name}-web-sg-tf"
   description = "SSH ve HTTP erisimi icin"
+  vpc_id = module.networking.vpc_id
 
   ingress { # (in gress) içeri giriş portları
     description = "SSH"
@@ -66,9 +67,15 @@ resource "aws_instance" "web_server" {
   ami                    = data.aws_ami.my_ubuntu.id
   instance_type          = "t3.micro"
   key_name               = data.aws_key_pair.existing_key.key_name
+  subnet_id = module.networking.public_subnet_id
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
   tags = {
-    Name = "${var.project_name}-web-server-tf"
+    Name = "${var.project_name}-${terraform.workspace}-web-server-tf"
   }
+}
+
+module "networking" {
+  source       = "./modules/networking"
+  project_name = var.project_name
 }
