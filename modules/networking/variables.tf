@@ -21,3 +21,13 @@ variable "availability_zone" {
   type    = string
   default = "eu-north-1a"
 }
+
+variable "public_subnet_cidr_2" {
+  type    = string
+  default = "10.0.3.0/24"
+}
+
+variable "availability_zone_2" {
+  type    = string
+  default = "eu-north-1b" 
+}

@@ -11,3 +11,7 @@ output "security_group_id" {
 output "server_name" {
   value = aws_instance.web_server.tags["Name"]
 }
+
+output "alb_dns_name" {
+  value = aws_lb.app.dns_name
+}
