@@ -7,9 +7,9 @@ from datetime import datetime, timezone, timedelta
 
 # değişebilecek değerler küçük harkle yazılır, sabit değerler ise BÜYÜK harfle yazılır.
 # Şimdi burada hangi AWS kaynaklarının takip edileceğini ve kaç saniyede bir metrikleri toplayacağını tanımlıyorum.
-CLUSTER_NAME = "xxxxxxxx-cluster"
-SERVICE_NAME = "xxxxxxxx-service"
-ALB_ARN_SUFFIX = "app/xxxxxxxxxxxx-alb-tf/xxxxxxxxxxxx"
+CLUSTER_NAME = "furkan-autopilot-cluster"
+SERVICE_NAME = "furkan-autopilot-service"
+ALB_ARN_SUFFIX = "app/furkan-autopilot-alb-tf/64f860f9256bc735"
 REGION = "eu-north-1"
 OUTPUT_FILE = "metrics_snapshot.csv"
 COLLECTION_INTERVAL_SECONDS = 30 
