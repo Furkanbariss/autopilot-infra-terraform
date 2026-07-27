@@ -27,8 +27,7 @@ def get_current_cpu():
             {
                'Name': 'ServiceName',
                 'Value': SERVICE_NAME
-            },
-                        
+            },               
         ],
         StartTime= start_time,
         EndTime= end_time,

@@ -6,9 +6,9 @@ from datetime import datetime
 ALB_URL = "http://xxxxxxxxxxxxxxxxxxxxxxxxxxxx.eu-north-1.elb.amazonaws.com"  # Terraform output'undan aldigin ALB DNS adresi
 
 PHASES = [
-    {"name": "dusuk_yuk", "duration_sec": 300, "iterations": 10000, "interval_sec": 2, "parallel": 1},
-    {"name": "orta_yuk", "duration_sec": 300, "iterations": 100000, "interval_sec": 1, "parallel": 1},
-    {"name": "yuksek_yuk_burst", "duration_sec": 180, "iterations": 500000, "interval_sec": 0.2, "parallel": 5},
+    {"name": "dusuk_yuk", "duration_sec": 180, "iterations": 10000, "interval_sec": 2, "parallel": 1},
+    {"name": "orta_yuk", "duration_sec": 180, "iterations": 100000, "interval_sec": 1, "parallel": 1},
+    {"name": "yuksek_yuk_burst", "duration_sec": 300, "iterations": 500000, "interval_sec": 0.2, "parallel": 5},
     {"name": "cooldown", "duration_sec": 300, "iterations": 10000, "interval_sec": 3, "parallel": 1},
 ]
 
