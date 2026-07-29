@@ -6,7 +6,7 @@ terraform {
     }
   }
 
-   backend "s3" {
+  backend "s3" {
     bucket = "furkan-terraform-state-2121"
     key    = "autopilot-infra/terraform.tfstate"
     region = "eu-north-1"
@@ -23,13 +23,13 @@ resource "aws_security_group" "web_sg" {
   description = "SSH ve HTTP erisimi icin"
   vpc_id      = module.networking.vpc_id
 
-  ingress { # (in gress) içeri giriş portları
-    description = "SSH"
-    from_port   = 22 #22. porttan başla
-    to_port     = 22 #22. porta kadar girişe izin ver
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # Not: Gerçek projelerde kendi IP'ni vermen gerek. Burası erişebilecek IP'leri temsil eder. 0.0.0.0/0 ise tüm IP'lere açık olduğu anlamına gelir.
-  }
+  # ingress { # (in gress) içeri giriş portları
+  #   description = "SSH"
+  #   from_port   = 22 #22. porttan başla
+  #   to_port     = 22 #22. porta kadar girişe izin ver
+  #   protocol    = "tcp"
+  #   cidr_blocks = ["0.0.0.0/0"] # Not: Gerçek projelerde kendi IP'ni vermen gerek. Burası erişebilecek IP'leri temsil eder. 0.0.0.0/0 ise tüm IP'lere açık olduğu anlamına gelir.
+  # }
 
   ingress {
     description = "HTTP"
@@ -59,35 +59,35 @@ resource "aws_security_group" "web_sg" {
   }
 }
 
-resource "aws_s3_bucket" "terraform_test_bucket" {
-  bucket = "furkan-terraform-unique-test-bucket-2204"
-}
+# resource "aws_s3_bucket" "terraform_test_bucket" {
+#   bucket = "furkan-terraform-unique-test-bucket-2204"
+# }
 
-data "aws_key_pair" "existing_key" { #data ile daha önceden bende var olan keyi çekiyorum.
-  key_name = "victus_key_0"
-}
+# data "aws_key_pair" "existing_key" { #data ile daha önceden bende var olan keyi çekiyorum.
+#   key_name = "victus_key_0"
+# }
 
-data "aws_ami" "my_ubuntu" {
-  most_recent = true
-  owners      = ["099720109477"] # Canonical'in resmi owner ID'si (normalde sen resourse ile oluştur şimdilik böyle yapıyom)
+# data "aws_ami" "my_ubuntu" {
+#   most_recent = true
+#   owners      = ["099720109477"] # Canonical'in resmi owner ID'si (normalde sen resourse ile oluştur şimdilik böyle yapıyom)
 
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
-  }
-}
+#   filter {
+#     name   = "name"
+#     values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
+#   }
+# }
 
-resource "aws_instance" "web_server" {
-  ami                    = data.aws_ami.my_ubuntu.id
-  instance_type          = "t3.micro"
-  key_name               = data.aws_key_pair.existing_key.key_name
-  subnet_id              = module.networking.public_subnet_id
-  vpc_security_group_ids = [aws_security_group.web_sg.id]
+# resource "aws_instance" "web_server" {
+#   ami                    = data.aws_ami.my_ubuntu.id
+#   instance_type          = "t3.micro"
+#   key_name               = data.aws_key_pair.existing_key.key_name
+#   subnet_id              = module.networking.public_subnet_id
+#   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
-  tags = {
-    Name = "${var.project_name}-${terraform.workspace}-web-server-tf"
-  }
-}
+#   tags = {
+#     Name = "${var.project_name}-${terraform.workspace}-web-server-tf"
+#   }
+# }
 
 module "networking" {
   source       = "./modules/networking"
@@ -97,7 +97,7 @@ module "networking" {
 resource "aws_ecr_repository" "app" {
   name                 = "${var.project_name}-fastapi-app"
   image_tag_mutability = "MUTABLE"
-  force_delete         = true  # Bu satırı ekledik
+  force_delete         = true # Bu satırı ekledik
 
   tags = {
     Name = "${var.project_name}-ecr"
@@ -189,7 +189,7 @@ resource "aws_lb" "app" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.web_sg.id]
-  subnets            = [
+  subnets = [
     module.networking.public_subnet_id,
     module.networking.public_subnet_2_id
   ]
@@ -217,3 +217,52 @@ resource "aws_lb_listener" "app" {
     target_group_arn = aws_lb_target_group.app.arn
   }
 }
+
+resource "aws_sns_topic" "alerts" {
+  name = "${var.project_name}-alerts"
+}
+
+resource "aws_sns_topic_subscription" "email_alert" {
+  topic_arn = aws_sns_topic.alerts.arn
+  protocol  = "email"
+  endpoint  = "sonmezisikfurkanbaris@gmail.com" # kendi email adresini yaz
+}
+
+resource "aws_cloudwatch_metric_alarm" "high_cpu" {
+  alarm_name          = "${var.project_name}-high-cpu"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = 2 # 2 ardisik periyot esigi asarsa tetiklen
+  metric_name         = "CPUUtilization"
+  namespace           = "AWS/ECS"
+  period              = 60 # 60 saniyelik periyotlar
+  statistic           = "Average"
+  threshold           = 85 # %85 esigi
+  alarm_description   = "ECS service CPU kullanimi %85'i asti"
+
+  dimensions = {
+    ClusterName = aws_ecs_cluster.main.name
+    ServiceName = aws_ecs_service.app.name
+  }
+
+  alarm_actions = [aws_sns_topic.alerts.arn] # tetiklenince SNS'e haber ver
+  ok_actions    = [aws_sns_topic.alerts.arn] # normale donunce de haber ver
+}
+
+# resource "aws_cloudwatch_metric_alarm" "max_tasks_reached" {
+#   alarm_name          = "${var.project_name}-max-tasks"
+#   comparison_operator = "GreaterThanOrEqualToThreshold"
+#   evaluation_periods  = 1
+#   metric_name         = "DesiredTaskCount"
+#   namespace           = "ECS/ContainerInsights" # Container Insights aktif olmali
+#   period              = 60
+#   statistic           = "Maximum"
+#   threshold           = 4
+#   alarm_description   = "ECS service maksimum task sayisina ulasti"
+
+#   dimensions = {
+#     ClusterName = aws_ecs_cluster.main.name
+#     ServiceName = aws_ecs_service.app.name
+#   }
+
+#   alarm_actions = [aws_sns_topic.alerts.arn]
+# }
