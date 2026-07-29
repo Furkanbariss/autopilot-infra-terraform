@@ -165,11 +165,13 @@ resource "aws_cloudwatch_log_group" "ecs_logs" {
 }
 
 resource "aws_ecs_service" "app" {
-  name            = "${var.project_name}-service"
-  cluster         = aws_ecs_cluster.main.id
-  task_definition = aws_ecs_task_definition.app.arn
-  desired_count   = 1
-  launch_type     = "FARGATE"
+  name                               = "${var.project_name}-service"
+  cluster                            = aws_ecs_cluster.main.id
+  task_definition                    = aws_ecs_task_definition.app.arn
+  desired_count                      = 1
+  launch_type                        = "FARGATE"
+  deployment_minimum_healthy_percent = 100 # deployment sirasinda her zaman en az %100 kapasite ayakta kalsin
+  deployment_maximum_percent         = 200 # gecici olarak 2 katina kadar cikabilsin (eski + yeni ayni anda)
 
   network_configuration {
     subnets          = [module.networking.public_subnet_id]
