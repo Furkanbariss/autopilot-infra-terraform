@@ -23,14 +23,6 @@ resource "aws_security_group" "web_sg" {
   description = "SSH ve HTTP erisimi icin"
   vpc_id      = module.networking.vpc_id
 
-  # ingress { # (in gress) içeri giriş portları
-  #   description = "SSH"
-  #   from_port   = 22 #22. porttan başla
-  #   to_port     = 22 #22. porta kadar girişe izin ver
-  #   protocol    = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"] # Not: Gerçek projelerde kendi IP'ni vermen gerek. Burası erişebilecek IP'leri temsil eder. 0.0.0.0/0 ise tüm IP'lere açık olduğu anlamına gelir.
-  # }
-
   ingress {
     description = "HTTP"
     from_port   = 80
@@ -58,36 +50,6 @@ resource "aws_security_group" "web_sg" {
     Name = "${var.project_name}-web-sg-tf"
   }
 }
-
-# resource "aws_s3_bucket" "terraform_test_bucket" {
-#   bucket = "furkan-terraform-unique-test-bucket-2204"
-# }
-
-# data "aws_key_pair" "existing_key" { #data ile daha önceden bende var olan keyi çekiyorum.
-#   key_name = "victus_key_0"
-# }
-
-# data "aws_ami" "my_ubuntu" {
-#   most_recent = true
-#   owners      = ["099720109477"] # Canonical'in resmi owner ID'si (normalde sen resourse ile oluştur şimdilik böyle yapıyom)
-
-#   filter {
-#     name   = "name"
-#     values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
-#   }
-# }
-
-# resource "aws_instance" "web_server" {
-#   ami                    = data.aws_ami.my_ubuntu.id
-#   instance_type          = "t3.micro"
-#   key_name               = data.aws_key_pair.existing_key.key_name
-#   subnet_id              = module.networking.public_subnet_id
-#   vpc_security_group_ids = [aws_security_group.web_sg.id]
-
-#   tags = {
-#     Name = "${var.project_name}-${terraform.workspace}-web-server-tf"
-#   }
-# }
 
 module "networking" {
   source       = "./modules/networking"
@@ -249,25 +211,6 @@ resource "aws_cloudwatch_metric_alarm" "high_cpu" {
   alarm_actions = [aws_sns_topic.alerts.arn] # tetiklenince SNS'e haber ver
   ok_actions    = [aws_sns_topic.alerts.arn] # normale donunce de haber ver
 }
-
-# resource "aws_cloudwatch_metric_alarm" "max_tasks_reached" {
-#   alarm_name          = "${var.project_name}-max-tasks"
-#   comparison_operator = "GreaterThanOrEqualToThreshold"
-#   evaluation_periods  = 1
-#   metric_name         = "DesiredTaskCount"
-#   namespace           = "ECS/ContainerInsights" # Container Insights aktif olmali
-#   period              = 60
-#   statistic           = "Maximum"
-#   threshold           = 4
-#   alarm_description   = "ECS service maksimum task sayisina ulasti"
-
-#   dimensions = {
-#     ClusterName = aws_ecs_cluster.main.name
-#     ServiceName = aws_ecs_service.app.name
-#   }
-
-#   alarm_actions = [aws_sns_topic.alerts.arn]
-# }
 
 resource "aws_iam_role" "lambda_autoscaler_role" {
   name = "${var.project_name}-lambda-autoscaler-role"
