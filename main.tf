@@ -326,13 +326,35 @@ data "archive_file" "lambda_zip" {
 resource "aws_lambda_function" "autoscaler" {
   function_name    = "${var.project_name}-lambda-autoscaler"
   filename         = data.archive_file.lambda_zip.output_path
-  source_code_hash = data.archive_file.lambda_zip.output_base64sha256
+  source_code_hash = data.archive_file.lambda_zip.output_base64sha256 #Terraform'un kodun değişip değişmediğini anlamasını sağlar. bunuda hash koduna çevirerek bakar eski hash kodu ile yenisi aynıysa değişiklik yokder devam eder.
   handler          = "lambda_function.lambda_handler"
-  runtime          = "pyton3.12"
+  runtime          = "python3.13"
   role             = aws_iam_role.lambda_autoscaler_role.arn
-  timeout          = 30
+  timeout          = 30 # normalde varsayılan 3 öneriliyor interneete fakat ben deneme amaçlı 3 yapıcam faturayı dengelemeni sağlar.
 
   tags = {
     Name = "${var.project_name}-autoscaler"
   }
+}
+
+#2 dakikada bir çalıcak alarm kurduk
+resource "aws_cloudwatch_event_rule" "autoscaler_schedule" {
+  name                = "${var.project_name}-autoscaler-schedule"
+  description         = "Autoscaler Lambda'yi periyodik tetikler"
+  schedule_expression = "rate(2 minutes)"
+}
+
+# bu alarmı lambdaya bağladık
+resource "aws_cloudwatch_event_target" "autoscaler_target" {
+  rule      = aws_cloudwatch_event_rule.autoscaler_schedule.name
+  target_id = "autoscaler_lambda"
+  arn       = aws_lambda_function.autoscaler.arn
+}
+
+resource "aws_lambda_permission" "allow_eventbridge" {
+  statement_id  = "AllowExecutionFromEventBridge"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.autoscaler.function_name
+  principal     = "events.amazonaws.com"
+  source_arn    = aws_cloudwatch_event_rule.autoscaler_schedule.arn
 }

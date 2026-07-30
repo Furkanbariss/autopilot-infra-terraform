@@ -12,8 +12,8 @@ def get_current_cpu():
     end_time= datetime.now(timezone.utc) 
     start_time = end_time - timedelta(hours=1)
 
-    print("Sorgulanan Zaman (UTC):", start_time, "ile", end_time, "arasi")
-    print("Sorgulanan Bolge:", REGION)
+    # print("Sorgulanan Zaman (UTC):", start_time, "ile", end_time, "arasi")
+    # print("Sorgulanan Bolge:", REGION)
 
     response = cloudwatch.get_metric_statistics(
         

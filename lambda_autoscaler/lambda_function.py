@@ -1,6 +1,5 @@
 import boto3
 from datetime import datetime, timedelta, timezone
-from collections import deque
 
 REGION = "eu-north-1"
 CLUSTER_NAME = "furkan-autopilot-cluster"
@@ -18,17 +17,17 @@ def get_recent_cpu_values(minutes=5):
     end_time = datetime.now(timezone.utc)
     start_time = end_time - timedelta(minutes = minutes)
 
-    response = client.get_metric_statistics(
-    Namespace= "AWS/ECS",
-    MetricName= "CPUUtilization",
-    Dimensions=[
+    response = cloudwatch.get_metric_statistics(
+        Namespace= "AWS/ECS",
+        MetricName= "CPUUtilization",
+        Dimensions=[
         { "Name": "ClusterName", "Value": CLUSTER_NAME },
         { "Name": "ServiceName", "Value": SERVICE_NAME },
-    ],
-    StartTime=start_time,
-    EndTime=end_time,
-    Period=60,
-    Statistics=["Average"],
+         ],
+        StartTime=start_time,
+        EndTime=end_time,
+        Period=60,
+        Statistics=["Average"],
     )
 
     datapoints = sorted(response.get("Datapoints", []), key=lambda x: x["Timestamp"])
@@ -39,7 +38,7 @@ def get_current_desired_count():
     return response["services"][0]["desiredCount"]
 
 def update_desired_count(new_count):
-    safe_count = max(MIN_TASKS,max(MAX_TASKS,new_count))
+    safe_count = max(MIN_TASKS,min(MAX_TASKS,new_count))
     ecs.update_service(
         cluster=CLUSTER_NAME,
         service=SERVICE_NAME,
@@ -60,8 +59,8 @@ def decide_action(cpu_values):
     else:
         return "NO_CHANGE" , f"Ortalama CPU {avg_cpu:.1f} normal aralikta"
 
-def lamda_handler(event, context):
-    cpu_values = get_current_desired_count(minutes = 5)
+def lambda_handler(event, context):
+    cpu_values = get_recent_cpu_values(minutes=5)
 
     if not cpu_values:
         print("CloudWatch'tan gelen veri yok, bu döngü atlanıyor.")
