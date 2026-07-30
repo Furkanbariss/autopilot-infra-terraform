@@ -268,3 +268,71 @@ resource "aws_cloudwatch_metric_alarm" "high_cpu" {
 
 #   alarm_actions = [aws_sns_topic.alerts.arn]
 # }
+
+resource "aws_iam_role" "lambda_autoscaler_role" {
+  name = "${var.project_name}-lambda-autoscaler-role"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Action = "sts:AssumeRole"
+      Effect = "Allow"
+      Principal = {
+        Service = "lambda.amazonaws.com"
+      }
+    }]
+  })
+}
+
+# Lambda'nin kendi loglarini yazabilmesi icin
+resource "aws_iam_role_policy_attachment" "lambda_basic_execution" {
+  role       = aws_iam_role.lambda_autoscaler_role.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+}
+
+# Least-privilege: sadece gereken CloudWatch ve ECS izinleri
+resource "aws_iam_role_policy" "lambda_autoscaler_policy" {
+  name = "${var.project_name}-lambda-autoscaler-policy"
+  role = aws_iam_role.lambda_autoscaler_role.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Sid      = "ReadCloudWatchMetrics"
+        Effect   = "Allow"
+        Action   = ["cloudwatch:GetMetricStatistics"]
+        Resource = "*"
+      },
+      {
+        Sid    = "ManageEcsService"
+        Effect = "Allow"
+        Action = [
+          "ecs:DescribeServices",
+          "ecs:UpdateService"
+        ]
+        Resource = aws_ecs_service.app.id # SADECE bu service'i yonetebilir
+      }
+    ]
+  })
+}
+
+data "archive_file" "lambda_zip" {
+  type        = "zip"
+  source_file = "${path.module}/lambda_autoscaler/lambda_function.py"
+  output_path = "${path.module}/lambda_autoscaler/lambda_function.zip"
+} # bu data nereye gidiyor?
+
+resource "aws_lambda_function" "autoscaler" {
+  function_name    = "${var.project_name}-lambda-autoscaler"
+  filename         = data.archive_file.lambda_zip.output_path
+  source_code_hash = data.archive_file.lambda_zip.output_base64sha256
+  handler          = "lambda_function.lambda_handler"
+  runtime          = "pyton3.12"
+  role             = aws_iam_role.lambda_autoscaler_role.arn
+  timeout          = 30
+
+  tags = {
+    Name = "${var.project_name}-autoscaler"
+  }
+}
