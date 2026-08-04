@@ -20,7 +20,11 @@ GitHub Actions seçildi.
 - **Bakım yok:** Jenkins gibi ayrı bir sunucu yönetilmez
 - **Ücretsiz:** Public/kişisel projeler için yeterli ücretsiz kota
 
+## İlgili Yaml dosyası
+> Detaylı yaml dosyası için → **[autopilot-app-CI/CD-yaml](https://github.com/Furkanbariss/autopilot-app/blob/main/.github/workflows/deploy.yml)**
+
 ## Sonuçlar
 - Push → test → build → ECR push → ECS deploy pipeline'ı otomatik çalışıyor
 - Test başarısız olursa deploy hiç çalışmıyor (hatalı kod canlıya çıkmıyor)
 - Pipeline süresi ~1 dakika
+
