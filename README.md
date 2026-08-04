@@ -37,7 +37,7 @@ Bu ayrım, her bileşenin bağımsız versiyonlanmasını ve uygulama değişikl
 
 ## Mimari
 
-![Mimari Diyagram](docs/images/architecture.png)
+![Mimari Diyagram](docs/images/architecture.svg)
 
 > Detaylı mimari açıklaması için → **[docs/architecture.md](docs/architecture.md)**
 

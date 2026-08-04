@@ -1,0 +1,114 @@
+<svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="900" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="30" y="35" font-size="20" font-weight="700" fill="#111111">AutoPilot Infra — System Architecture</text>
+
+  <!-- LAYER 1: CI/CD -->
+  <text x="30" y="70" font-size="15" font-weight="700" fill="#111111">1 — CI/CD (GitHub Actions)</text>
+  <rect x="30" y="80" width="840" height="80" rx="12" fill="#f5f5f5" stroke="#cccccc" stroke-width="1"/>
+
+  <rect x="50" y="100" width="130" height="42" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="115" y="126" font-size="13" fill="#1e3a8a" text-anchor="middle">git push</text>
+  <line x1="180" y1="121" x2="215" y2="121" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="215" y="100" width="130" height="42" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="280" y="126" font-size="13" fill="#1e3a8a" text-anchor="middle">test</text>
+  <line x1="345" y1="121" x2="380" y2="121" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="380" y="100" width="170" height="42" rx="8" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"/>
+  <text x="465" y="126" font-size="13" fill="#134e4a" text-anchor="middle">build + ECR push</text>
+  <line x1="550" y1="121" x2="585" y2="121" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="585" y="100" width="220" height="42" rx="8" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="695" y="126" font-size="13" fill="#4c1d95" text-anchor="middle">deploy (ECS update-service)</text>
+
+  <!-- LAYER 2: IaC -->
+  <text x="30" y="195" font-size="15" font-weight="700" fill="#111111">2 — Infrastructure as Code</text>
+  <rect x="30" y="207" width="390" height="60" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="50" y="230" font-size="13" font-weight="700" fill="#7c2d12">Terraform</text>
+  <text x="50" y="250" font-size="12" fill="#7c2d12">plan / apply / destroy</text>
+
+  <rect x="470" y="207" width="400" height="60" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="490" y="230" font-size="13" font-weight="700" fill="#7c2d12">S3 Remote State</text>
+  <text x="490" y="250" font-size="12" fill="#7c2d12">terraform.tfstate</text>
+
+  <line x1="470" y1="237" x2="420" y2="237" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="225" y1="267" x2="225" y2="300" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- LAYER 3: AWS Infra -->
+  <text x="30" y="330" font-size="15" font-weight="700" fill="#111111">3 — AWS Infrastructure (Terraform-managed)</text>
+  <rect x="30" y="342" width="840" height="290" rx="16" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="50" y="365" font-size="12" fill="#7f1d1d">VPC 10.0.0.0/16 — public subnets across 2 AZs</text>
+
+  <rect x="50" y="380" width="150" height="46" rx="8" fill="#f5f5f5" stroke="#999999" stroke-width="1.5"/>
+  <text x="125" y="407" font-size="12" fill="#333333" text-anchor="middle">User / load</text>
+  <line x1="200" y1="403" x2="235" y2="403" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="235" y="380" width="190" height="46" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="330" y="399" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">ALB</text>
+  <text x="330" y="416" font-size="11" fill="#1e3a8a" text-anchor="middle">target group + health check</text>
+  <line x1="330" y1="426" x2="330" y2="462" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="200" y="462" width="250" height="70" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="325" y="485" font-size="13" font-weight="700" fill="#14532d" text-anchor="middle">ECS Service (Fargate)</text>
+  <text x="325" y="502" font-size="11" fill="#14532d" text-anchor="middle">FastAPI container — /compute, /health</text>
+  <text x="325" y="518" font-size="11" fill="#14532d" text-anchor="middle">desired_count = N, self-healing</text>
+
+  <rect x="500" y="380" width="260" height="46" rx="8" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"/>
+  <text x="630" y="407" font-size="12" fill="#134e4a" text-anchor="middle">ECR — container image registry</text>
+  <line x1="500" y1="418" x2="452" y2="470" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="500" y="462" width="260" height="70" rx="10" fill="#f5f5f5" stroke="#999999" stroke-width="1.5"/>
+  <text x="630" y="485" font-size="13" font-weight="700" fill="#333333" text-anchor="middle">IAM (least-privilege)</text>
+  <text x="630" y="502" font-size="11" fill="#333333" text-anchor="middle">task execution role</text>
+  <text x="630" y="518" font-size="11" fill="#333333" text-anchor="middle">scoped ECS + CloudWatch access</text>
+
+  <rect x="200" y="558" width="250" height="60" rx="10" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="325" y="581" font-size="13" font-weight="700" fill="#4c1d95" text-anchor="middle">CloudWatch</text>
+  <text x="325" y="598" font-size="11" fill="#4c1d95" text-anchor="middle">cpu, memory, requests, latency</text>
+  <line x1="325" y1="532" x2="325" y2="558" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="500" y="558" width="260" height="60" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="630" y="581" font-size="13" font-weight="700" fill="#7c2d12" text-anchor="middle">Alarms + SNS</text>
+  <text x="630" y="598" font-size="11" fill="#7c2d12" text-anchor="middle">email on threshold breach</text>
+  <line x1="450" y1="588" x2="500" y2="588" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- LAYER 4: Decision Engine -->
+  <text x="30" y="672" font-size="15" font-weight="700" fill="#111111">4 — Decision Engine (rule-based, serverless)</text>
+  <line x1="325" y1="632" x2="325" y2="690" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="30" y="690" width="840" height="130" rx="14" fill="#f0fdfa" stroke="#14b8a6" stroke-width="1.5"/>
+
+  <rect x="50" y="710" width="320" height="92" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="70" y="732" font-size="13" font-weight="700" fill="#14532d">Lambda: autoscaler</text>
+  <text x="70" y="752" font-size="11" fill="#14532d">moving average (smooths spikes)</text>
+  <text x="70" y="770" font-size="11" fill="#14532d">threshold check (scale up/down)</text>
+  <text x="70" y="788" font-size="11" fill="#14532d">triggered every 2 min by EventBridge</text>
+  <line x1="370" y1="756" x2="405" y2="756" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="405" y="710" width="160" height="92" rx="10" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="485" y="738" font-size="13" font-weight="700" fill="#4c1d95" text-anchor="middle">Decision</text>
+  <text x="485" y="760" font-size="11" fill="#4c1d95" text-anchor="middle">SCALE UP / DOWN</text>
+  <text x="485" y="778" font-size="11" fill="#4c1d95" text-anchor="middle">NO CHANGE</text>
+  <line x1="565" y1="756" x2="600" y2="756" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="600" y="710" width="150" height="92" rx="10" fill="#f5f5f5" stroke="#999999" stroke-width="1.5"/>
+  <text x="675" y="738" font-size="13" font-weight="700" fill="#333333" text-anchor="middle">Audit Log</text>
+  <text x="675" y="760" font-size="11" fill="#333333" text-anchor="middle">action + reason</text>
+  <text x="675" y="778" font-size="11" fill="#333333" text-anchor="middle">CloudWatch Logs</text>
+
+  <path d="M485 710 L485 690 L110 690 L110 550 L200 495" fill="none" stroke="#333333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="115" y="678" font-size="11" fill="#333333">boto3 → update desired_count</text>
+
+  <!-- LAYER 5: Cost -->
+  <text x="30" y="850" font-size="15" font-weight="700" fill="#111111">5 — Cost Management</text>
+  <rect x="30" y="860" width="840" height="42" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="50" y="886" font-size="12" fill="#7c2d12">Cost Explorer API → weekly cost report, idle resource detection</text>
+</svg>
