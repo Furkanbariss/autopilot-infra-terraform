@@ -75,7 +75,7 @@ Tüm metrikler kontrollü test ortamında **gerçekten ölçülmüştür** (öl�
 | **Altyapı kurulum (RTO)** | ~3.5 dakika | `terraform destroy` sonrası tüm ortamın sıfırdan kurulumu |
 | **CI/CD deploy süresi** | ~1 dakika | GitHub Actions pipeline (test + build + deploy) |
 | **Ölçeklendirme tepki süresi** | ~57 saniye | Scale-up kararından yeni task'ın "Running" olmasına kadar |
-| **Deployment kesinti** | 0 başarısız istek | Deploy sırasında sürekli trafik altında (kanıt: [`deploy-probe.log`](deploy-probe.log)) |
+| **Deployment kesinti** | 0 başarısız istek | Deploy penceresi boyunca (16:56–16:58) gönderilen tüm istekler sürekli trafik altında (kanıt: [`deploy-probe.log`](deploy-probe.log)) |
 
 ---
 
