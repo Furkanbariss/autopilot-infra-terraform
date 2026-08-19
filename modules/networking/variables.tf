@@ -27,7 +27,12 @@ variable "public_subnet_cidr_2" {
   default = "10.0.3.0/24"
 }
 
+variable "private_subnet_cidr_2" {
+  type    = string
+  default = "10.0.4.0/24"
+}
+
 variable "availability_zone_2" {
   type    = string
-  default = "eu-north-1b" 
+  default = "eu-north-1b"
 }
