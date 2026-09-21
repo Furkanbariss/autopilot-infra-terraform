@@ -4,8 +4,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 6.0"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
   }
-
   backend "s3" {
     bucket = "furkan-terraform-state-2121"
     key    = "autopilot-infra/terraform.tfstate"
@@ -109,6 +112,35 @@ resource "aws_ecs_task_definition" "app" {
           protocol      = "tcp"
         }
       ]
+
+      # Hassas olmayan degerler: normal environment variable
+      environment = [
+        {
+          name  = "DB_HOST"
+          value = aws_db_instance.main.address # endpoint degil, address (port'suz hali)
+        },
+        {
+          name  = "DB_PORT"
+          value = "5432"
+        },
+        {
+          name  = "DB_NAME"
+          value = "autopilot"
+        }
+      ]
+
+      # Hassas degerler: Secrets Manager'dan cekilir
+      secrets = [
+        {
+          name      = "DB_USER"
+          valueFrom = "${aws_secretsmanager_secret.db_credentials.arn}:username::"
+        },
+        {
+          name      = "DB_PASSWORD"
+          valueFrom = "${aws_secretsmanager_secret.db_credentials.arn}:password::"
+        }
+      ]
+
       logConfiguration = {
         logDriver = "awslogs"
         options = {
@@ -300,4 +332,103 @@ resource "aws_lambda_permission" "allow_eventbridge" {
   function_name = aws_lambda_function.autoscaler.function_name
   principal     = "events.amazonaws.com"
   source_arn    = aws_cloudwatch_event_rule.autoscaler_schedule.arn
+}
+
+resource "aws_db_subnet_group" "main" {
+  name = "${var.project_name}-db-subnet-group"
+  subnet_ids = [
+    module.networking.private_subnet_2_id,
+    module.networking.private_subnet_id
+  ]
+
+  tags = {
+    Name = "${var.project_name}-db-subnet-group"
+  }
+}
+
+resource "aws_security_group" "rds_sg" {
+  name        = "${var.project_name}-rds-sg"
+  description = "RDS erisimi - sadece ECS tasklarindan"
+  vpc_id      = module.networking.vpc_id
+
+  ingress {
+    description     = "PostgreSQL from ECS tasks"
+    from_port       = 5432
+    to_port         = 5432
+    protocol        = "tcp"
+    security_groups = [aws_security_group.web_sg.id] # belirli bir ip aralığı vermektense ECS security group'undan gelmesi daha mantıklı dedik.
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "${var.project_name}-rds-sg"
+  }
+}
+
+resource "random_password" "db_password" {
+  length           = 24
+  special          = true
+  override_special = "!#$%&*()-_=+[]{}<>:?" # RDS bu karakterleri kabul etmediği için almadım
+}
+
+resource "aws_secretsmanager_secret" "db_credentials" {
+  name                    = "${var.project_name}-db-credentials"
+  description             = "RDS PostgreSQL baglanti bilgileri"
+  recovery_window_in_days = 0 #Öğrenme ortamında 0 yapmak pratik; production'da bunu asla yapma (yanlışlıkla silinen bir secret geri getirilemez).
+}
+
+resource "aws_secretsmanager_secret_version" "db_credentials" {
+  secret_id = aws_secretsmanager_secret.db_credentials.id
+  secret_string = jsonencode({
+    username = "autopilot_admin"
+    password = random_password.db_password.result
+    dbname   = "autopilot"
+  })
+}
+
+resource "aws_iam_role_policy" "ecs_secrets_access" {
+  name = "${var.project_name}-ecs-secrets-access"
+  role = aws_iam_role.ecs_task_execution_role.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Effect   = "Allow"
+      Action   = ["secretsmanager:GetSecretValue"]
+      Resource = [aws_secretsmanager_secret.db_credentials.arn]
+    }]
+  })
+}
+
+resource "aws_db_instance" "main" {
+  identifier     = "${var.project_name}-db"
+  engine         = "postgres"
+  engine_version = "16"
+  instance_class = "db.t3.micro" # Free Tier uyumlu
+
+  allocated_storage     = 20 # GB, Free Tier limiti
+  max_allocated_storage = 50 # otomatik buyume tavani
+  storage_type          = "gp2"
+  storage_encrypted     = true # at-rest sifreleme
+
+  db_name  = "autopilot"
+  username = "autopilot_admin"
+  password = random_password.db_password.result
+
+  db_subnet_group_name   = aws_db_subnet_group.main.name
+  vpc_security_group_ids = [aws_security_group.rds_sg.id]
+  publicly_accessible    = false # KRITIK: internete kapali
+
+  backup_retention_period = 1     # 1 gun yedek (ogrenme ortami)
+  skip_final_snapshot     = true  # destroy sirasinda snapshot alma (ogrenme ortami)
+  deletion_protection     = false # ogrenme ortami: silinebilsin
+
+  tags = {
+    Name = "${var.project_name}-rds"
+  }
 }
