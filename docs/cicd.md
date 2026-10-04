@@ -65,7 +65,7 @@ deployment_maximum_percent         = 200
 - `maximum_percent = 200` → geçici olarak eski + yeni task'lar birlikte çalışabilir
 - Yeni task health check'ten geçmeden eski task durdurulmaz
 
-**Sonuç:** Deploy sırasında sistem kesintisiz erişilebilir kalır. (Ölçüm: deploy sırasında sürekli trafik altında 0 başarısız istek — kanıt: [`deploy-probe.log`](../deploy-probe.log), detay: [metrics-and-testing.md](metrics-and-testing.md))
+**Sonuç:** Deploy sırasında sistem kesintisiz erişilebilir kalır. (Ölçüm: deploy sırasında sürekli trafik altında 0 başarısız istek — deploy: [GitHub Actions run #6](https://github.com/Furkanbariss/autopilot-app/actions/runs/30549204790), detay: [metrics-and-testing.md](metrics-and-testing.md))
 
 Blue-green deployment de değerlendirilmiş, bu ölçek için rolling update'in yeterli olduğu sonucuna varılmıştır. (bkz. [ADR-0007](adr/0007-rolling-update.md))
 

@@ -57,7 +57,7 @@ Measure-Command { terraform apply -auto-approve }
 
 **Sonuç:** Deploy penceresi boyunca (16:56–16:58) gönderilen tüm istekler `status=200`, **0 başarısız istek** (`hatali=0`).
 
-**Kanıt:** [`deploy-probe.log`](../deploy-probe.log) — timestamp'li tam istek logu.
+**Deploy:** [GitHub Actions run #6](https://github.com/Furkanbariss/autopilot-app/actions/runs/30549204790) — pipeline 16:55:36–16:56:48 arasında çalıştı, ardından ECS rolling update gerçekleşti.
 
 Bu, rolling update (`minimum_healthy_percent = 100`) sayesinde sıfır kesintili deployment'ın kanıtıdır.
 
@@ -65,7 +65,9 @@ Bu, rolling update (`minimum_healthy_percent = 100`) sayesinde sıfır kesintili
 
 ## Bilinen Kısıtlama: Provisioning Lag
 
-**Gözlem:** Aşırı ve ani yük artışlarında (5x paralel istek, istek başına 500.000 iterations), load generator zaman aşımı (`Read timed out`) hataları almaya başlamıştır.
+**Gözlem:** Aşırı ve ani yük artışlarında (saniyede 10 paralel istek, istek başına 500.000 iterations), load generator zaman aşımı (`Read timed out`) hataları almaya başlamıştır.
+
+**Kanıt:** [`burst-test.log`](../burst-test.log) — burst fazında gönderilen 157 isteğin tamamı zaman aşımına uğramıştır.
 
 **Sebep:** Bu hatalar **deployment kaynaklı değildir** — reaktif (metrik-tabanlı) autoscaling'in doğal bir sınırıdır. Yük artış hızı, autoscaler'ın yeni task ekleme hızını (karar + task başlatma ~57sn) geçtiğinde, mevcut task'lar geçici olarak boğulur ve timeout oluşur. Buna **provisioning lag** denir.
 

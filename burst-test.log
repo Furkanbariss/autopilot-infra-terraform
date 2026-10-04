@@ -1,0 +1,558 @@
+Load generator basliyor. 1 dongu x 4 faz calisacak.
+
+########## DONGU 1/1 ##########
+
+=== FAZ BASLADI: dusuk_yuk (suresi: 180sn) ===
+[17:27:11] status=200 | basarili=1 hatali=0
+[17:27:13] status=200 | basarili=2 hatali=0
+[17:27:15] status=200 | basarili=3 hatali=0
+[17:27:18] status=200 | basarili=4 hatali=0
+[17:27:20] status=200 | basarili=5 hatali=0
+[17:27:22] status=200 | basarili=6 hatali=0
+[17:27:24] status=200 | basarili=7 hatali=0
+[17:27:26] status=200 | basarili=8 hatali=0
+[17:27:29] status=200 | basarili=9 hatali=0
+[17:27:31] status=200 | basarili=10 hatali=0
+[17:27:33] status=200 | basarili=11 hatali=0
+[17:27:35] status=200 | basarili=12 hatali=0
+[17:27:38] status=200 | basarili=13 hatali=0
+[17:27:40] status=200 | basarili=14 hatali=0
+[17:27:42] status=200 | basarili=15 hatali=0
+[17:27:44] status=200 | basarili=16 hatali=0
+[17:27:46] status=200 | basarili=17 hatali=0
+[17:27:49] status=200 | basarili=18 hatali=0
+[17:27:51] status=200 | basarili=19 hatali=0
+[17:27:53] status=200 | basarili=20 hatali=0
+[17:27:55] status=200 | basarili=21 hatali=0
+[17:27:57] status=200 | basarili=22 hatali=0
+[17:28:00] status=200 | basarili=23 hatali=0
+[17:28:02] status=200 | basarili=24 hatali=0
+[17:28:04] status=200 | basarili=25 hatali=0
+[17:28:06] status=200 | basarili=26 hatali=0
+[17:28:08] status=200 | basarili=27 hatali=0
+[17:28:11] status=200 | basarili=28 hatali=0
+[17:28:13] status=200 | basarili=29 hatali=0
+[17:28:15] status=200 | basarili=30 hatali=0
+[17:28:17] status=200 | basarili=31 hatali=0
+[17:28:19] status=200 | basarili=32 hatali=0
+[17:28:22] status=200 | basarili=33 hatali=0
+[17:28:24] status=200 | basarili=34 hatali=0
+[17:28:26] status=200 | basarili=35 hatali=0
+[17:28:28] status=200 | basarili=36 hatali=0
+[17:28:30] status=200 | basarili=37 hatali=0
+[17:28:33] status=200 | basarili=38 hatali=0
+[17:28:35] status=200 | basarili=39 hatali=0
+[17:28:37] status=200 | basarili=40 hatali=0
+[17:28:39] status=200 | basarili=41 hatali=0
+[17:28:41] status=200 | basarili=42 hatali=0
+[17:28:44] status=200 | basarili=43 hatali=0
+[17:28:46] status=200 | basarili=44 hatali=0
+[17:28:48] status=200 | basarili=45 hatali=0
+[17:28:50] status=200 | basarili=46 hatali=0
+[17:28:52] status=200 | basarili=47 hatali=0
+[17:28:55] status=200 | basarili=48 hatali=0
+[17:28:57] status=200 | basarili=49 hatali=0
+[17:28:59] status=200 | basarili=50 hatali=0
+[17:29:01] status=200 | basarili=51 hatali=0
+[17:29:03] status=200 | basarili=52 hatali=0
+[17:29:06] status=200 | basarili=53 hatali=0
+[17:29:08] status=200 | basarili=54 hatali=0
+[17:29:10] status=200 | basarili=55 hatali=0
+[17:29:12] status=200 | basarili=56 hatali=0
+[17:29:14] status=200 | basarili=57 hatali=0
+[17:29:17] status=200 | basarili=58 hatali=0
+[17:29:19] status=200 | basarili=59 hatali=0
+[17:29:21] status=200 | basarili=60 hatali=0
+[17:29:23] status=200 | basarili=61 hatali=0
+[17:29:25] status=200 | basarili=62 hatali=0
+[17:29:28] status=200 | basarili=63 hatali=0
+[17:29:30] status=200 | basarili=64 hatali=0
+[17:29:32] status=200 | basarili=65 hatali=0
+[17:29:34] status=200 | basarili=66 hatali=0
+[17:29:36] status=200 | basarili=67 hatali=0
+[17:29:39] status=200 | basarili=68 hatali=0
+[17:29:41] status=200 | basarili=69 hatali=0
+[17:29:43] status=200 | basarili=70 hatali=0
+[17:29:45] status=200 | basarili=71 hatali=0
+[17:29:47] status=200 | basarili=72 hatali=0
+[17:29:50] status=200 | basarili=73 hatali=0
+[17:29:52] status=200 | basarili=74 hatali=0
+[17:29:54] status=200 | basarili=75 hatali=0
+[17:29:56] status=200 | basarili=76 hatali=0
+[17:29:58] status=200 | basarili=77 hatali=0
+[17:30:01] status=200 | basarili=78 hatali=0
+[17:30:03] status=200 | basarili=79 hatali=0
+[17:30:05] status=200 | basarili=80 hatali=0
+[17:30:07] status=200 | basarili=81 hatali=0
+[17:30:09] status=200 | basarili=82 hatali=0
+=== FAZ BITTI: dusuk_yuk ===
+
+=== FAZ BASLADI: orta_yuk (suresi: 180sn) ===
+[17:30:14] status=200 | basarili=83 hatali=0
+[17:30:14] status=200 | basarili=84 hatali=0
+[17:30:14] status=200 | basarili=85 hatali=0
+[17:30:14] status=200 | basarili=86 hatali=0
+[17:30:14] status=200 | basarili=87 hatali=0
+[17:30:17] status=200 | basarili=88 hatali=0
+[17:30:18] status=200 | basarili=89 hatali=0
+[17:30:18] status=200 | basarili=90 hatali=0
+[17:30:18] status=200 | basarili=91 hatali=0
+[17:30:18] status=200 | basarili=92 hatali=0
+[17:30:21] status=200 | basarili=93 hatali=0
+[17:30:21] status=200 | basarili=94 hatali=0
+[17:30:21] status=200 | basarili=95 hatali=0
+[17:30:22] status=200 | basarili=96 hatali=0
+[17:30:22] status=200 | basarili=97 hatali=0
+[17:30:25] status=200 | basarili=98 hatali=0
+[17:30:25] status=200 | basarili=99 hatali=0
+[17:30:25] status=200 | basarili=100 hatali=0
+[17:30:25] status=200 | basarili=101 hatali=0
+[17:30:25] status=200 | basarili=102 hatali=0
+[17:30:29] status=200 | basarili=103 hatali=0
+[17:30:29] status=200 | basarili=104 hatali=0
+[17:30:29] status=200 | basarili=105 hatali=0
+[17:30:29] status=200 | basarili=106 hatali=0
+[17:30:29] status=200 | basarili=107 hatali=0
+[17:30:32] status=200 | basarili=108 hatali=0
+[17:30:33] status=200 | basarili=109 hatali=0
+[17:30:33] status=200 | basarili=110 hatali=0
+[17:30:33] status=200 | basarili=111 hatali=0
+[17:30:33] status=200 | basarili=112 hatali=0
+[17:30:36] status=200 | basarili=113 hatali=0
+[17:30:37] status=200 | basarili=114 hatali=0
+[17:30:37] status=200 | basarili=115 hatali=0
+[17:30:37] status=200 | basarili=116 hatali=0
+[17:30:37] status=200 | basarili=117 hatali=0
+[17:30:38] status=502 | basarili=117 hatali=1
+[17:30:40] status=200 | basarili=118 hatali=1
+[17:30:40] status=200 | basarili=119 hatali=1
+[17:30:40] status=200 | basarili=120 hatali=1
+[17:30:40] status=200 | basarili=121 hatali=1
+[17:30:43] status=200 | basarili=122 hatali=1
+[17:30:43] status=200 | basarili=123 hatali=1
+[17:30:44] status=200 | basarili=124 hatali=1
+[17:30:44] status=200 | basarili=125 hatali=1
+[17:30:44] status=200 | basarili=126 hatali=1
+[17:30:47] status=200 | basarili=127 hatali=1
+[17:30:47] status=200 | basarili=128 hatali=1
+[17:30:47] status=200 | basarili=129 hatali=1
+[17:30:47] status=200 | basarili=130 hatali=1
+[17:30:47] status=200 | basarili=131 hatali=1
+[17:30:51] status=200 | basarili=132 hatali=1
+[17:30:51] status=200 | basarili=133 hatali=1
+[17:30:51] status=200 | basarili=134 hatali=1
+[17:30:51] status=200 | basarili=135 hatali=1
+[17:30:51] status=200 | basarili=136 hatali=1
+[17:30:54] status=200 | basarili=137 hatali=1
+[17:30:55] status=200 | basarili=138 hatali=1
+[17:30:55] status=200 | basarili=139 hatali=1
+[17:30:55] status=200 | basarili=140 hatali=1
+[17:30:55] status=200 | basarili=141 hatali=1
+[17:30:58] status=200 | basarili=142 hatali=1
+[17:30:59] status=200 | basarili=143 hatali=1
+[17:30:59] status=200 | basarili=144 hatali=1
+[17:30:59] status=200 | basarili=145 hatali=1
+[17:30:59] status=200 | basarili=146 hatali=1
+[17:31:03] status=200 | basarili=147 hatali=1
+[17:31:03] status=200 | basarili=148 hatali=1
+[17:31:03] status=200 | basarili=149 hatali=1
+[17:31:03] status=200 | basarili=150 hatali=1
+[17:31:03] status=200 | basarili=151 hatali=1
+[17:31:06] status=200 | basarili=152 hatali=1
+[17:31:07] status=200 | basarili=153 hatali=1
+[17:31:07] status=200 | basarili=154 hatali=1
+[17:31:07] status=200 | basarili=155 hatali=1
+[17:31:07] status=200 | basarili=156 hatali=1
+[17:31:10] status=200 | basarili=157 hatali=1
+[17:31:10] status=200 | basarili=158 hatali=1
+[17:31:10] status=200 | basarili=159 hatali=1
+[17:31:10] status=200 | basarili=160 hatali=1
+[17:31:10] status=200 | basarili=161 hatali=1
+[17:31:14] status=200 | basarili=162 hatali=1
+[17:31:14] status=200 | basarili=163 hatali=1
+[17:31:14] status=200 | basarili=164 hatali=1
+[17:31:14] status=200 | basarili=165 hatali=1
+[17:31:14] status=200 | basarili=166 hatali=1
+[17:31:18] status=200 | basarili=167 hatali=1
+[17:31:18] status=200 | basarili=168 hatali=1
+[17:31:18] status=200 | basarili=169 hatali=1
+[17:31:18] status=200 | basarili=170 hatali=1
+[17:31:18] status=200 | basarili=171 hatali=1
+[17:31:21] status=200 | basarili=172 hatali=1
+[17:31:22] status=200 | basarili=173 hatali=1
+[17:31:22] status=200 | basarili=174 hatali=1
+[17:31:22] status=200 | basarili=175 hatali=1
+[17:31:22] status=200 | basarili=176 hatali=1
+[17:31:25] status=200 | basarili=177 hatali=1
+[17:31:25] status=200 | basarili=178 hatali=1
+[17:31:25] status=200 | basarili=179 hatali=1
+[17:31:25] status=200 | basarili=180 hatali=1
+[17:31:25] status=200 | basarili=181 hatali=1
+[17:31:29] status=200 | basarili=182 hatali=1
+[17:31:29] status=200 | basarili=183 hatali=1
+[17:31:29] status=200 | basarili=184 hatali=1
+[17:31:29] status=200 | basarili=185 hatali=1
+[17:31:29] status=200 | basarili=186 hatali=1
+[17:31:32] status=200 | basarili=187 hatali=1
+[17:31:32] status=200 | basarili=188 hatali=1
+[17:31:33] status=200 | basarili=189 hatali=1
+[17:31:33] status=200 | basarili=190 hatali=1
+[17:31:33] status=200 | basarili=191 hatali=1
+[17:31:36] status=200 | basarili=192 hatali=1
+[17:31:36] status=200 | basarili=193 hatali=1
+[17:31:37] status=200 | basarili=194 hatali=1
+[17:31:37] status=200 | basarili=195 hatali=1
+[17:31:37] status=200 | basarili=196 hatali=1
+[17:31:40] status=200 | basarili=197 hatali=1
+[17:31:40] status=200 | basarili=198 hatali=1
+[17:31:40] status=200 | basarili=199 hatali=1
+[17:31:40] status=200 | basarili=200 hatali=1
+[17:31:40] status=200 | basarili=201 hatali=1
+[17:31:43] status=200 | basarili=202 hatali=1
+[17:31:44] status=200 | basarili=203 hatali=1
+[17:31:44] status=200 | basarili=204 hatali=1
+[17:31:44] status=200 | basarili=205 hatali=1
+[17:31:44] status=200 | basarili=206 hatali=1
+[17:31:47] status=200 | basarili=207 hatali=1
+[17:31:47] status=200 | basarili=208 hatali=1
+[17:31:47] status=200 | basarili=209 hatali=1
+[17:31:48] status=200 | basarili=210 hatali=1
+[17:31:48] status=200 | basarili=211 hatali=1
+[17:31:51] status=200 | basarili=212 hatali=1
+[17:31:51] status=200 | basarili=213 hatali=1
+[17:31:51] status=200 | basarili=214 hatali=1
+[17:31:52] status=200 | basarili=215 hatali=1
+[17:31:52] status=200 | basarili=216 hatali=1
+[17:31:55] status=200 | basarili=217 hatali=1
+[17:31:55] status=200 | basarili=218 hatali=1
+[17:31:55] status=200 | basarili=219 hatali=1
+[17:31:55] status=200 | basarili=220 hatali=1
+[17:31:55] status=200 | basarili=221 hatali=1
+[17:31:59] status=200 | basarili=222 hatali=1
+[17:31:59] status=200 | basarili=223 hatali=1
+[17:31:59] status=200 | basarili=224 hatali=1
+[17:31:59] status=200 | basarili=225 hatali=1
+[17:31:59] status=200 | basarili=226 hatali=1
+[17:32:02] status=200 | basarili=227 hatali=1
+[17:32:03] status=200 | basarili=228 hatali=1
+[17:32:03] status=200 | basarili=229 hatali=1
+[17:32:03] status=200 | basarili=230 hatali=1
+[17:32:03] status=200 | basarili=231 hatali=1
+[17:32:07] status=200 | basarili=232 hatali=1
+[17:32:07] status=200 | basarili=233 hatali=1
+[17:32:07] status=200 | basarili=234 hatali=1
+[17:32:07] status=200 | basarili=235 hatali=1
+[17:32:07] status=200 | basarili=236 hatali=1
+[17:32:10] status=200 | basarili=237 hatali=1
+[17:32:10] status=200 | basarili=238 hatali=1
+[17:32:10] status=200 | basarili=239 hatali=1
+[17:32:11] status=200 | basarili=240 hatali=1
+[17:32:11] status=200 | basarili=241 hatali=1
+[17:32:14] status=200 | basarili=242 hatali=1
+[17:32:14] status=200 | basarili=243 hatali=1
+[17:32:14] status=200 | basarili=244 hatali=1
+[17:32:14] status=200 | basarili=245 hatali=1
+[17:32:14] status=200 | basarili=246 hatali=1
+[17:32:18] status=200 | basarili=247 hatali=1
+[17:32:18] status=200 | basarili=248 hatali=1
+[17:32:18] status=200 | basarili=249 hatali=1
+[17:32:18] status=200 | basarili=250 hatali=1
+[17:32:18] status=200 | basarili=251 hatali=1
+[17:32:21] status=200 | basarili=252 hatali=1
+[17:32:22] status=200 | basarili=253 hatali=1
+[17:32:22] status=200 | basarili=254 hatali=1
+[17:32:22] status=200 | basarili=255 hatali=1
+[17:32:22] status=200 | basarili=256 hatali=1
+[17:32:25] status=200 | basarili=257 hatali=1
+[17:32:26] status=200 | basarili=258 hatali=1
+[17:32:26] status=200 | basarili=259 hatali=1
+[17:32:26] status=200 | basarili=260 hatali=1
+[17:32:26] status=200 | basarili=261 hatali=1
+[17:32:29] status=200 | basarili=262 hatali=1
+[17:32:29] status=200 | basarili=263 hatali=1
+[17:32:29] status=200 | basarili=264 hatali=1
+[17:32:29] status=200 | basarili=265 hatali=1
+[17:32:29] status=200 | basarili=266 hatali=1
+[17:32:33] status=200 | basarili=267 hatali=1
+[17:32:33] status=200 | basarili=268 hatali=1
+[17:32:33] status=200 | basarili=269 hatali=1
+[17:32:33] status=200 | basarili=270 hatali=1
+[17:32:33] status=200 | basarili=271 hatali=1
+[17:32:36] status=200 | basarili=272 hatali=1
+[17:32:36] status=200 | basarili=273 hatali=1
+[17:32:37] status=200 | basarili=274 hatali=1
+[17:32:37] status=200 | basarili=275 hatali=1
+[17:32:37] status=200 | basarili=276 hatali=1
+[17:32:39] status=200 | basarili=277 hatali=1
+[17:32:41] status=200 | basarili=278 hatali=1
+[17:32:41] status=200 | basarili=279 hatali=1
+[17:32:41] status=200 | basarili=280 hatali=1
+[17:32:41] status=200 | basarili=281 hatali=1
+[17:32:44] status=200 | basarili=282 hatali=1
+[17:32:44] status=200 | basarili=283 hatali=1
+[17:32:45] status=200 | basarili=284 hatali=1
+[17:32:45] status=200 | basarili=285 hatali=1
+[17:32:45] status=200 | basarili=286 hatali=1
+[17:32:47] status=200 | basarili=287 hatali=1
+[17:32:48] status=200 | basarili=288 hatali=1
+[17:32:48] status=200 | basarili=289 hatali=1
+[17:32:48] status=200 | basarili=290 hatali=1
+[17:32:48] status=200 | basarili=291 hatali=1
+[17:32:52] status=200 | basarili=292 hatali=1
+[17:32:52] status=200 | basarili=293 hatali=1
+[17:32:52] status=200 | basarili=294 hatali=1
+[17:32:52] status=200 | basarili=295 hatali=1
+[17:32:52] status=200 | basarili=296 hatali=1
+[17:32:56] status=200 | basarili=297 hatali=1
+[17:32:56] status=200 | basarili=298 hatali=1
+[17:32:56] status=200 | basarili=299 hatali=1
+[17:32:56] status=200 | basarili=300 hatali=1
+[17:32:56] status=200 | basarili=301 hatali=1
+[17:33:00] status=200 | basarili=302 hatali=1
+[17:33:00] status=200 | basarili=303 hatali=1
+[17:33:00] status=200 | basarili=304 hatali=1
+[17:33:00] status=200 | basarili=305 hatali=1
+[17:33:00] status=200 | basarili=306 hatali=1
+[17:33:03] status=200 | basarili=307 hatali=1
+[17:33:03] status=200 | basarili=308 hatali=1
+[17:33:03] status=200 | basarili=309 hatali=1
+[17:33:03] status=200 | basarili=310 hatali=1
+[17:33:03] status=200 | basarili=311 hatali=1
+[17:33:07] status=200 | basarili=312 hatali=1
+[17:33:07] status=200 | basarili=313 hatali=1
+[17:33:07] status=200 | basarili=314 hatali=1
+[17:33:07] status=200 | basarili=315 hatali=1
+[17:33:07] status=200 | basarili=316 hatali=1
+[17:33:11] status=200 | basarili=317 hatali=1
+[17:33:11] status=200 | basarili=318 hatali=1
+[17:33:11] status=200 | basarili=319 hatali=1
+[17:33:11] status=200 | basarili=320 hatali=1
+[17:33:11] status=200 | basarili=321 hatali=1
+=== FAZ BITTI: orta_yuk ===
+
+=== FAZ BASLADI: yuksek_yuk_burst (suresi: 300sn) ===
+[17:33:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=2
+[17:33:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=3
+[17:33:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=4
+[17:33:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=5
+[17:33:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=6
+[17:33:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=7[17:33:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=8
+[17:33:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=9
+[17:33:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=10
+[17:33:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=11
+
+[17:33:33] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=12
+[17:33:33] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=13
+[17:33:33] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=14
+[17:33:33] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=15
+[17:33:33] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=16
+[17:33:33] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=17
+[17:33:33] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=18
+[17:33:33] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=19
+[17:33:33] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=20
+[17:33:33] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=21
+[17:33:43] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=22
+[17:33:43] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=23
+[17:33:43] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=24
+[17:33:43] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=25
+[17:33:43] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=26
+[17:33:43] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=27
+[17:33:43] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=28
+[17:33:43] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=29
+[17:33:43] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=30
+[17:33:43] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=31
+[17:33:53] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=32
+[17:33:53] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=33
+[17:33:53] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=34
+[17:33:53] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=35
+[17:33:53] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=36
+[17:33:53] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=37
+[17:33:53] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=38
+[17:33:53] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=39
+[17:33:53] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=40
+[17:33:53] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=41
+[17:34:03] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=42
+[17:34:03] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=43
+[17:34:03] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=44
+[17:34:04] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=45
+[17:34:04] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=46
+[17:34:04] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=47
+[17:34:04] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=48
+[17:34:04] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=49
+[17:34:04] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=50
+[17:34:04] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=51
+[17:34:14] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=52
+[17:34:14] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=53
+[17:34:14] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=54[17:34:14] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=55
+[17:34:14] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=56
+[17:34:14] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=57
+[17:34:14] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=58
+[17:34:14] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=59
+[17:34:14] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=60
+
+[17:36:39] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=61
+[17:36:49] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=62
+[17:36:49] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=63
+[17:36:49] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=64
+[17:36:49] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=65
+[17:36:49] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=66
+[17:36:49] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=67
+[17:36:49] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=68
+[17:36:49] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=69
+[17:36:49] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=70
+[17:36:49] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=71
+[17:36:59] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=72
+[17:37:00] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=73
+[17:37:00] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=74
+[17:37:00] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=75
+[17:37:00] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=76
+[17:37:00] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=77
+[17:37:00] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=78
+[17:37:00] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=79
+[17:37:00] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=80
+[17:37:00] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=81
+[17:37:10] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=82
+[17:37:10] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=83
+[17:37:10] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=84
+[17:37:10] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=85
+[17:37:10] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=86
+[17:37:10] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=87
+[17:37:10] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=88
+[17:37:10] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=89
+[17:37:10] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=90
+[17:37:10] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=91
+[17:37:20] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=92
+[17:37:20] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=93
+[17:37:20] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=94
+[17:37:20] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=95
+[17:37:20] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=96
+[17:37:20] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=97
+[17:37:20] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=98
+[17:37:20] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=99
+[17:37:20] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=100
+[17:37:20] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=101
+[17:37:30] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=102
+[17:37:30] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=103
+[17:37:30] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=104
+[17:37:30] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=105
+[17:37:30] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=106
+[17:37:30] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=107
+[17:37:30] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=108
+[17:37:30] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=109
+[17:37:30] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=110
+[17:37:31] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=111
+[17:37:41] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=112
+[17:37:41] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=113
+[17:37:41] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=114
+[17:37:41] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=115
+[17:37:41] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=116
+[17:37:41] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=117
+[17:37:41] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=118
+[17:37:41] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=119
+[17:37:41] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=120
+[17:37:41] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=121
+[17:37:51] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=122
+[17:37:51] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=123
+[17:37:51] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=124
+[17:37:51] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=125
+[17:37:51] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=126
+[17:37:51] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=127
+[17:37:51] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=128
+[17:37:51] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=129
+[17:37:51] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=130
+[17:37:51] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=131
+[17:38:01] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=132
+[17:38:01] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=133
+[17:38:01] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=134
+[17:38:01] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=135
+[17:38:01] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=136
+[17:38:02] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=137
+[17:38:02] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=138
+[17:38:02] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=139
+[17:38:02] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=140
+[17:38:02] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=141
+[17:38:12] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=142
+[17:38:12] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=143
+[17:38:12] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=144
+[17:38:12] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=145
+[17:38:12] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=146
+[17:38:12] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=147[17:38:12] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=148
+[17:38:12] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=149
+
+[17:38:12] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=150
+[17:38:12] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=151
+[17:38:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=152
+[17:38:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=153
+[17:38:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=154
+[17:38:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=155
+[17:38:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=156
+[17:38:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=157
+[17:38:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=158
+[17:38:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=159
+[17:38:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=160
+[17:38:22] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=161
+=== FAZ BITTI: yuksek_yuk_burst ===
+
+=== FAZ BASLADI: cooldown (suresi: 300sn) ===
+[17:38:32] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=162
+[17:38:46] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=163
+[17:38:59] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=164
+[17:39:12] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=165
+[17:39:25] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=166
+[17:39:38] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=167
+[17:39:51] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=168
+[17:40:04] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=169
+[17:40:17] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=321 hatali=170
+[17:40:28] status=200 | basarili=322 hatali=170
+[17:40:42] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=322 hatali=171
+[17:40:55] HATA: HTTPConnectionPool(host='furkan-autopilot-alb-tf-1671077349.eu-north-1.elb.amazonaws.com', port=80): Read timed out. (read timeout=10) | basarili=322 hatali=172
+[17:41:08] status=200 | basarili=323 hatali=172
+[17:41:12] status=200 | basarili=324 hatali=172
+[17:41:15] status=200 | basarili=325 hatali=172
+[17:41:18] status=200 | basarili=326 hatali=172
+[17:41:21] status=200 | basarili=327 hatali=172
+[17:41:25] status=200 | basarili=328 hatali=172
+[17:41:28] status=200 | basarili=329 hatali=172
+[17:41:31] status=200 | basarili=330 hatali=172
+[17:41:34] status=200 | basarili=331 hatali=172
+[17:41:37] status=200 | basarili=332 hatali=172
+[17:41:41] status=200 | basarili=333 hatali=172
+[17:41:44] status=200 | basarili=334 hatali=172
+[17:41:47] status=200 | basarili=335 hatali=172
+[17:41:50] status=200 | basarili=336 hatali=172
+[17:41:53] status=200 | basarili=337 hatali=172
+[17:41:56] status=200 | basarili=338 hatali=172
+[17:42:00] status=200 | basarili=339 hatali=172
+[17:42:03] status=200 | basarili=340 hatali=172
+[17:42:06] status=200 | basarili=341 hatali=172
+[17:42:09] status=200 | basarili=342 hatali=172
+[17:42:12] status=200 | basarili=343 hatali=172
+[17:42:16] status=200 | basarili=344 hatali=172
+[17:42:19] status=200 | basarili=345 hatali=172
+[17:42:22] status=200 | basarili=346 hatali=172
+[17:42:25] status=200 | basarili=347 hatali=172
+[17:42:28] status=200 | basarili=348 hatali=172
+[17:42:32] status=200 | basarili=349 hatali=172
+[17:42:35] status=200 | basarili=350 hatali=172
+[17:42:38] status=200 | basarili=351 hatali=172
+[17:42:41] status=200 | basarili=352 hatali=172
+[17:42:44] status=200 | basarili=353 hatali=172
+[17:42:48] status=200 | basarili=354 hatali=172
+[17:42:51] status=200 | basarili=355 hatali=172
+[17:42:54] status=200 | basarili=356 hatali=172
+[17:42:57] status=200 | basarili=357 hatali=172
+[17:43:00] status=200 | basarili=358 hatali=172
+[17:43:04] status=200 | basarili=359 hatali=172
+[17:43:07] status=200 | basarili=360 hatali=172
+[17:43:10] status=200 | basarili=361 hatali=172
+[17:43:13] status=200 | basarili=362 hatali=172
+[17:43:16] status=200 | basarili=363 hatali=172
+[17:43:20] status=200 | basarili=364 hatali=172
+=== FAZ BITTI: cooldown ===
+
+Load generator tamamlandi.
+
+=== SONUC ===
+Toplam basarili istek: 364
+Toplam hatali istek: 172
+Basari orani: 67.91%

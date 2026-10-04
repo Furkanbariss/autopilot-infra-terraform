@@ -75,7 +75,7 @@ Tüm metrikler kontrollü test ortamında **gerçekten ölçülmüştür** (öl�
 | **Altyapı kurulum (RTO)** | ~3.5 dakika | `terraform destroy` sonrası tüm ortamın sıfırdan kurulumu |
 | **CI/CD deploy süresi** | ~1 dakika | GitHub Actions pipeline (test + build + deploy) |
 | **Ölçeklendirme tepki süresi** | ~57 saniye | Scale-up kararından yeni task'ın "Running" olmasına kadar |
-| **Deployment kesinti** | 0 başarısız istek | Deploy penceresi boyunca (16:56–16:58) gönderilen tüm istekler sürekli trafik altında (kanıt: [`deploy-probe.log`](deploy-probe.log)) |
+| **Deployment kesinti** | 0 başarısız istek | Deploy penceresi boyunca (16:56–16:58) sürekli trafik altında gönderilen tüm istekler başarılı (deploy: [GitHub Actions run #6](https://github.com/Furkanbariss/autopilot-app/actions/runs/30549204790)) |
 
 ---
 
@@ -99,13 +99,15 @@ Bu ana sayfa bir özettir. Her bileşenin detayı ayrı sayfalarda:
 | [Autoscaling](docs/autoscaling.md) | Karar motoru, Lambda taşıma, ölçeklendirme mantığı |
 | [Monitoring & Cost](docs/monitoring-and-cost.md) | CloudWatch Alarms, SNS, maliyet raporlama |
 | [Metrics & Testing](docs/metrics-and-testing.md) | Ölçüm yöntemleri, test senaryoları, bilinen kısıtlamalar |
-| [Architecture Decision Records](docs/adr/README.md) | Tüm mimari kararların gerekçeleri (9 ADR) |
+| [Architecture Decision Records](docs/adr/README.md) | Tüm mimari kararların gerekçeleri (10 ADR) |
 
 ---
 
 ## Bilinen Kısıtlama
 
-Ani ve aşırı yük artışlarında (örn. 5x paralel istek, istek başına 500K iterations) **provisioning lag** gözlemlenmiştir: autoscaling'in yeni task ekleme hızı, yük artış hızının gerisinde kaldığında geçici timeout'lar oluşabilir. Bu, reaktif (metrik-tabanlı) autoscaling'in doğal bir sınırıdır. Olası iyileştirmeler (daha düşük scale-up eşiği, çoklu task ekleme, predictive scaling) [docs/metrics-and-testing.md](docs/metrics-and-testing.md)'de tartışılmıştır.
+Ani ve aşırı yük artışlarında (örn. saniyede 10 paralel istek, istek başına 500K iterations) **provisioning lag** gözlemlenmiştir: autoscaling'in yeni task ekleme hızı, yük artış hızının gerisinde kaldığında geçici timeout'lar oluşabilir. Bu, reaktif (metrik-tabanlı) autoscaling'in doğal bir sınırıdır. Olası iyileştirmeler (daha düşük scale-up eşiği, çoklu task ekleme, predictive scaling) [docs/metrics-and-testing.md](docs/metrics-and-testing.md)'de tartışılmıştır.
+
+Kanıt: [`burst-test.log`](burst-test.log). Burst fazında (saniyede 10 paralel istek) gönderilen 157 isteğin tamamı zaman aşımına uğramıştır.
 
 ---
 

@@ -19,5 +19,5 @@ Rolling update tercih edildi.
 - **Uygun ölçek:** Bu proje ölçeğinde blue-green'in ek izolasyonu gereksiz
 
 ## Sonuçlar
-- Deploy penceresi boyunca (16:56–16:58) gönderilen tüm istekler sürekli trafik altında **0 başarısız istek** ölçüldü (kanıt: deploy-probe.log)
+- Deploy penceresi boyunca (16:56–16:58) sürekli trafik altında **0 başarısız istek** ölçüldü (deploy: [GitHub Actions run #6](https://github.com/Furkanbariss/autopilot-app/actions/runs/30549204790))
 - Blue-green, daha yüksek izolasyon gerektiren gelecekteki bir senaryo için değerlendirilebilir
